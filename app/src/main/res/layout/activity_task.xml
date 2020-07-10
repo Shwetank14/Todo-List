@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TaskActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <androidx.appcompat.widget.Toolbar
+            app:title="New Task"
+            app:titleTextColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:popupTheme="@style/AppTheme"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Title"
+        android:textColor="@color/colorAccent"
+        android:layout_margin="15dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleInp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        app:boxStrokeColor="@color/colorAccent"
+        android:background="@drawable/ic_border"
+        app:hintTextColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Task Title"
+            android:inputType="textCapWords"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Description"
+        android:textColor="@color/colorAccent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descriptionInp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+
+        app:boxStrokeColor="@color/colorAccent"
+        android:background="@drawable/ic_border"
+        app:hintTextColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the task description" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Set Date and Time"
+        android:textColor="@color/colorAccent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/datetimeInp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/ic_border"
+        app:hintTextColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/dateId"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:hint="Set Date"
+            android:textSize="15sp"
+            android:focusable="false"
+            android:cursorVisible="false"
+            android:drawableRight= "@drawable/ic_calendar_symbol"
+            android:drawableTint="@color/colorAccent"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tmp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+
+        app:boxStrokeColor="@color/colorAccent"
+        android:background="@drawable/ic_border"
+        app:hintTextColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/timeInp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="Set Time"
+            android:clickable="true"
+            android:focusable="false"
+            android:cursorVisible="false"
+            android:drawableEnd="@drawable/ic_baseline_access_time_24"
+            android:drawableTint="@color/colorAccent"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:drawablePadding="8dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="15dp">
+
+        <ImageView
+            android:clickable="true"
+            android:layout_marginTop="13.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_spin"
+            android:tint="@color/colorAccent"/>
+        <Spinner
+            android:id="@+id/mySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/createTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="15dp"
+        android:text="Create task"
+        android:textSize="10sp"
+        app:cornerRadius="5dp"
+        />
+
+
+</LinearLayout>
